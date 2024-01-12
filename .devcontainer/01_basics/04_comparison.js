@@ -16,3 +16,7 @@ console.log(null >= 0); //The reason is that an equality check == and comparison
 console.log(undefined == 0); /* undefined compared with anyone gives false */
 console.log(undefined > 0);
 console.log(undefined < 0);  
+
+// === 
+
+console.log("2" === 2);
