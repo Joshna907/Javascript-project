@@ -29,3 +29,21 @@ const myFunction = function(){
 console.log(typeof anotherId); // null has object type, but myfunction returns function
 console.log(typeof bigNumber); //undefined
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myYoutubename = "SavitaWaikardotcom"
+
+let anothername = myYoutubename
+anothername = "chaiaurcode" //This is a copy stored
+console.log(anothername);
+console.log(myYoutubename)
+
+let userone = {
+  email : "joshnagooglecom" 
+}
+
+let usertwo = userone // This is a stack memory pointing to the same heap memory object
+console.log(usertwo) 
+console.log(userone)
