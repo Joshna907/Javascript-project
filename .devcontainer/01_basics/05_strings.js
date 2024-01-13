@@ -33,3 +33,4 @@ console.log(url.replace('https', 'shit'))
 
 console.log(url.includes('shit')); //shit is not included in url, It basically tells does the url includes this or not
 
+// If you want more of this functions go to mdn web docs
