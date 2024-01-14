@@ -1,11 +1,11 @@
 const name = "joshna"
-const repoCount = 50
+const repoCount = 50  //const , let, var are keywords for declaring variables.
 
 // console.log(name + repoCount + " Value");   // this is not suggested (concatenation)
 
 console.log(`Hello my name is ${name}`); //use backticks instead of concatenation
 
-const game = new String('joshhh')
+const game = new String('joshhh')// creating object
  console.log(game[0]);
  console.log(game.__proto__); //prototype
 
