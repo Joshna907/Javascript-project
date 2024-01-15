@@ -1,6 +1,7 @@
 // singelton object we get from constructor not from literals
 //Object.create
-// object literals
+
+                                                     // object literals
 
 const mySym = Symbol("key1")  // Symbol should be defined first like this - 1
 
