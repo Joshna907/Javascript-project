@@ -16,23 +16,23 @@
     </div>
 </body>
 <script>
-    const parent = document.querySelector('.parent')
-    console.log(parent);
-    console.log(parent.children);
-    console.log(parent.children[1].innerHTML);
+    const parent = document.querySelector('.parent') // it will give you the parent
+    console.log(parent);    //  the  first parent
+    console.log(parent.children); // children like the div 
+    console.log(parent.children[1].innerHTML); // it will give you the tuesday div tag whole
 
     // for (let i = 0; i < parent.children.length; i++) {
     //      console.log(parent.children[i].innerHTML);
         
     // }
     parent.children[1].style.color = "orange"
-    // console.log(parent.firstElementChild);
-    // console.log(parent.lastElementChild);
+    // console.log(parent.firstElementChild); // it will give you first element in childrens
+    // console.log(parent.lastElementChild); // this will give you last
 
     const dayOne = document.querySelector('.day')
     // console.log(dayOne);
-    // console.log(dayOne.parentElement);
-    // console.log(dayOne.nextElementSibling);
+    // console.log(dayOne.parentElement);  
+    // console.log(dayOne.nextElementSibling); // we will get the next element in the tree
 
     console.log("NODES: ", parent.childNodes);
 </script>
