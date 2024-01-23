@@ -14,7 +14,7 @@
 </body>
 <script>
     const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
-    const xhr = new XMLHttpRequest());  // this is used as to send and receive informatn and to web server asynchronously in the background
+    const xhr = new XMLHttpRequest();  // this is used as to send and receive informatn and to web server asynchronously in the background
     xhr.open('GET', requestUrl) // its like sending
     xhr.onreadystatechange = function(){   // the onready state change keeps changing
         console.log(xhr.readyState); // now at what state it is will print that in console
