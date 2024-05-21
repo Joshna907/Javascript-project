@@ -4,28 +4,134 @@
     <meta charset="UTF-8">
     
     <title>DOM learning</title>
-    <style>
+     /* Ye title ka style hai isse hum browser main change kar sakte hain directly
+     without using this like title.style.backgroundcolor ya phir title.style.padding /*
+      /* style h1,p,har cheez ka hota hai /*
+browser :-
+      examples :-
+     title.style.backgroundColor = 'green' -> 'green' /*this will change the title to green */
+     title.style.padding = "15px" -> '15px'
+     title.style.borderRadius = "20px" -> '20px'
+
+      <style>
         .bg-black{
             background-color: #212121;
             color: #fff;
         }
     </style>
+
+browser :-
+/* document.getElementById :- (html ke id ke saath changes kar sakte hain js mein)
+here, we will perform on this title 
+<h1 id = "title" class = "heading">Dom learning on chai aur code</h1> 
+
+examples :- methods
+document.getElementById('title').id   -> 'title'
+document.getElementById('title').class -> undefined   /* the error is their is class not className */
+document.getElementById('title').className -> 'heading'
+document.getElementById('title').getAttribute('class')  -> 'heading'  /* You need to specify in the closebrackets the attribute */
+document.getElementById('title').setAttribute('class', 'test') -> undefined /* but ye change hojaayega but undefined dikhayega /*
+/*
+
+document.getElementByClassName('heading') /* just put class name and it will give you HTMLCollection
+document.querySelector('h2') // this, will give you the first h2 tag with its text in it.
+document.querySelector('#title') // #is used for id we will get the whole tag and inner text
+document.querySelector('.heading') // . is used for class as css selectors and will give you with all tag and inner text
+
+
+/* if we put title which is rightnow (id) we get all details of it with its style and tags */
+property :-
+title.textContent -> It will give you the textContent in it 
+title.innerHTML -> 
+title.innerText ->
+This all will give you the same output.
+
+
+So, what's the difference between them :-
+
+<h1 id=" title" class = "heading">DOM Learning on Chai aur code <span style = "display: none;">test text</span></h1>
+/* title.innerText -> 'DOM Learning on Chai aur code'
+/* title.textContent -> 'DOM Learning on Chai aur code test text'
+
+So, the difference between them is that innerText only gives you the visible text but textContent gives youthe
+hided text by span tag. 
+
+& the title.innerHTML ->  'DOM Learning on Chai aur code <span style = "display : none;">test text</span>'
+
+
 </head>
 <body class="bg-black">
-    <div >
-        <h1  id="title" class="heading">DOM learning on Chai aur code <span style="display: none;">test text</span></h1>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <h2>Lorem ipsum dolor sit.</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <input type="password" name="" id="">
+        <input type="password" name="" id=""> // just write input and it will show up
 
+using method :- document.querySelector('input[type = "password"]')  
+       
         <ul>
             <li class="list-item">one</li>
             <li class="list-item">two</li>
             <li class="list-item">three</li>
             <li class="list-item">four</li>
         </ul>
+
+     ##   Experiments with ul :-
+
+        document.querySelector('ul') /* So, this will give you all the outputs */
+
+        const myul = document.querySelector('ul') -> undefined /* even though it gives u undefined it will store it in myul */
+
+        myul.querySelector('li') /* It will give you all li tags as we have selected li tag
+
+        const turnGreen = myul.querySelector('li') /* Here, we have stored in turnGreen 
+
+        turnGreen.style.backgroundColor = "green" -> 'green'
+
+        turnGreen.style.padding = "10px" -> '10px' 
+
+        turnGreen.innerText -> 'one'
+
+        turnGreen.innerText = "five" -> 'five'
+
+        /* So, here basically what has happened that we have selected from the outer ul to inner list and then making changes in it */
+
+        ## document.querySelectorAll :-
+
+       document.querySelectorAll('li') /* This, will basically give you a NodeList, it is actually like an array but resembles it somehow,
+        to make changes on it we will store it in something
+
+       const tempLiList = document.querySelectorAll('li')
+
+       tempLiList[0].style.color = 'green' -> 'green' /* which will give you 'one' as green 
+    --> As, it is a Nodelist, we need to specify the 0th element should be green. 
+
+       tempLiList /* the nodelist we will get is like it will have forEach loop which we could use */
+
+     /* Here, we have tooked the li as l 
+
+       tempLiList.forEach(function (l) {
+        l.style.backgroundColor = 'green' // so, this will change all li color green 
+       })
+
+       const tempLiList = document.getElementByClassName('list-item') /* this will give you html collection */
+
+        
+       tempClassList -> /* this will give you html collection */
+
+       tempClassList.forEach(function(li){
+         console.log(i)
+       })  // This will give you an error
+
+       // So, we need to convert this htmlcollection to use map(forEach)
+
+       conversion :-
+
+       Array.from(tempClasslist) // This, will actually convert this into an array
+
+       const myConvertedArray =  Array.from(tempClassList) // This will hold all elemented into myConvertedArray
+
+       myConvertedArray.forEach(function(li){
+        li.style.color = 'orange'// so, all li elements text would change to orange color
+       })
+
+        
     </div>
 </body>
 </html>
