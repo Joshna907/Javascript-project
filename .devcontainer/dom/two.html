@@ -18,16 +18,15 @@
 <script>
     const parent = document.querySelector('.parent') // it will give you the parent
     console.log(parent);    //  the  first parent
-    console.log(parent.children); // children like the div 
-    console.log(parent.children[1].innerHTML); // it will give you the tuesday div tag whole
+    console.log(parent.children); // this will give you the html collection of it like all
+    console.log(parent.children[1].innerHTML); //  tuesday will be given as o/p 
 
-    // for (let i = 0; i < parent.children.length; i++) {
-    //      console.log(parent.children[i].innerHTML);
-        
-    // }
-    parent.children[1].style.color = "orange"
-    // console.log(parent.firstElementChild); // it will give you first element in childrens
-    // console.log(parent.lastElementChild); // this will give you last
+     for (let i = 0; i < parent.children.length; i++) { 
+         console.log(parent.children[i].innerHTML); // This will give us o/p from monday to thursday
+     }
+    parent.children[1].style.color = "orange" // so, it will change the color of div word
+    // console.log(parent.firstElementChild); // it will give you first element in childrens like the div tag
+    // console.log(parent.lastElementChild); // this will give you last, like the whole div tag
 
     const dayOne = document.querySelector('.day')
     // console.log(dayOne);
