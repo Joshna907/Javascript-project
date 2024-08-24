@@ -70,7 +70,7 @@ form.addEventListener('submit', function (e) {
 const clock = document.getElementById('clock');
 // const clock = document.querySelector('#clock')
 
-setInterval(function () {
+setInterval(function () { // This function is basically like mujhe interval batado mein continuously kaam karte rahunga
   let date = new Date();
   // console.log(date.toLocaleTimeString());
   clock.innerHTML = date.toLocaleTimeString();
