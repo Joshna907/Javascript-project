@@ -72,8 +72,8 @@ const clock = document.getElementById('clock');
 
 setInterval(function () { // This function is basically like mujhe interval batado mein continuously kaam karte rahunga
   let date = new Date();
-  // console.log(date.toLocaleTimeString());
-  clock.innerHTML = date.toLocaleTimeString();
+  // console.log(date.toLocaleTimeString()); // ye console mein print ho raha tha 
+  clock.innerHTML = date.toLocaleTimeString(); // innerhtml ke wajah se ye us orange waale mein print hogaya
 }, 1000);
 
 
@@ -84,7 +84,8 @@ setInterval(function () { // This function is basically like mujhe interval bata
 
 ```javascript
 
-let randomNumber = parseInt(Math.random() * 100 + 1);
+let randomNumber = parseInt(Math.random() * 100 + 1); 
+// Math.random() random no. generate karega uske point ke baad ke no shift karne ke liye * 100 and + 1 taaki 0 kabhi na aaye and then parseint for getting nos in integer 
 
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
@@ -95,21 +96,21 @@ const startOver = document.querySelector('.resultParas');
 
 const p = document.createElement('p');
 
-let prevGuess = [];
-let numGuess = 1;
+let prevGuess = []; // pehle kya kya guess kiya hai
+let numGuess = 1; // kitne attempts vo maar chuka hai
 
-let playGame = true;
+let playGame = true; // events khatam hogaye ya phir to ye variable aapko allow karega khelne ke liye
 
 if (playGame) {
   submit.addEventListener('click', function (e) {
-    e.preventDefault();
+    e.preventDefault(); // yeh e kidhar bhi server pe chal jayega so usko rokne ke liye preventdefault use kiya hai taaki hum usse use kar sake 
     const guess = parseInt(userInput.value);
     console.log(guess);
     validateGuess(guess);
   });
 }
 
-function validateGuess(guess) {
+function validateGuess(guess) { // ye functn check karega ki value conditions fulfill to kar rahi h na 
   if (isNaN(guess)) {
     alert('PLease enter a valid number');
   } else if (guess < 1) {
@@ -154,9 +155,9 @@ function displayMessage(message) {
 function endGame() {
   userInput.value = '';
   userInput.setAttribute('disabled', '');
-  p.classList.add('button');
+  p.classList.add('button'); // classlist is like manipulating things related to classname
   p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
-  startOver.appendChild(p);
+  startOver.appendChild(p); // startover is like a div like container which is holding p element 
   playGame = false;
   newGame();
 }
