@@ -58,7 +58,7 @@
         console.log(e.target.tagName); // target and all are the events 
         if (e.target.tagName === 'IMG') {
             console.log(e.target.id);
-            let removeIt = e.target.parentNode;
+            let removeIt = e.target.parentNode; //ul is the parent
             removeIt.remove(); // Removes the clicked image's parent <li>
         }
     });
