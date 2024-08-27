@@ -196,7 +196,7 @@ window.addEventListener('keydown', (e) => {
       <th>Code</th>
     </tr>
     <tr>
-      <td>${e.key === ' ' ? 'Space' : e.key}</td>
+      <td>${e.key === ' ' ? 'Space' : e.key}</td> // e.key and e.code are methods of object e which can be seen in console
       <td>${e.keyCode}</td> 
       <td>${e.code}</td>
     </tr>
