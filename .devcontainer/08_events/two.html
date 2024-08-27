@@ -20,7 +20,7 @@
     const changeMe = setTimeout(changeText, 2000) // this will change the text after 2000 milliseconds which is like 2 seconds
 
     document.querySelector('#stop').addEventListener('click', function(){
-        clearTimeout(changeMe)     // it checks that if we click on stop in under 2 seconds then the text will change back to its same
+        clearTimeout(changeMe)  // we can stop the even of settimeout which is happening by clicking on stop 
         console.log("STOPPED") 
     })
 </script>

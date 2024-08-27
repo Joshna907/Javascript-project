@@ -53,6 +53,11 @@
     //     console.log("google clicked");
     // }, false)
    
+   // ** Event Capturing - Event capturing is the opposite of bubbling.
+   // It starts from the outermost element and propagates down to the target element.
+
+   // ** Event Bubbling - Event bubbling is the process where an event starts at the most specific element (the target element) 
+   // and then propagates upward through the DOM tree to the less specific
     
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName); // target and all are the events 
@@ -66,3 +71,8 @@
     //removeIt.parentNode.removeChild(removeIt)
 </script>
 </html>
+
+Async lecture -
+// Javascript is synchronous and single threaded 
+// Blocking Code and Non-blocking code the Non-blocking code is like multi-tasking and the fetch api has higher
+//priority.
