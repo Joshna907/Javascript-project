@@ -20,7 +20,7 @@
         console.log(xhr.readyState); // now at what state it is will print that in console
         if (xhr.readyState === 4) {
             const data = JSON.parse(this.responseText) // it will convert the form into json as the type of data is string
-            console.log(typeof data); 
+            console.log(typeof data); m
             console.log(data.followers); // now we will get the data
         }
     }
