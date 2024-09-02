@@ -81,7 +81,7 @@ consumePromiseFive()
 //     try { // try actually test the code 
 //         const response = await fetch('https://jsonplaceholder.typicode.com/users')
 
-//         const data = await response.json() // await is like giving time to trust the promise 
+//         const data = await response.json() // await is like jab tak ye complete nahi hoga aage nahi iske liye it should be used with async 
 //         console.log(data);
 //     } catch (error) {
 //         console.log("E: ", error);   
@@ -99,5 +99,6 @@ fetch('https://api.github.com/users/hiteshchoudhary')
 })
 .catch((error) => console.log(error)) // catch gets the error
 
+
 // promise.all
-// yes this is also available, kuch reading aap b kro.
+// ki jar mi parameters takhel te jar resolve jhaale tarach yaatla program madhe yeu shakto 
